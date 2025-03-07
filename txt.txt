@@ -33,3 +33,8 @@ POST api/post/123/comment (txt)
 
 GET api/search (txt)
 
+AuthControler
+UserControler
+FeedControler
+PostControler
+SearchControler
