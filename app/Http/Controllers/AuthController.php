@@ -26,7 +26,9 @@ class AuthController extends Controller
         $birthdate = $request->input('birthdate');
 
         if($name && $email && $password && $birthdate) {
-
+            if(strtotime($birthdate) === false) {
+                $array['error'] = 'Data de nascimento inválida!';
+            }
         } else {
             $array['error'] = 'Não enviou todos os campos.';
         }
